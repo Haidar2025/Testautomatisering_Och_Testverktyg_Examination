@@ -1,0 +1,32 @@
+name: CI – Pytest & Behave
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checka ut kod
+        uses: actions/checkout@v4
+
+      - name: Sätt upp Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installera beroenden
+        run: pip install -r requirements.txt
+
+      - name: Installera Playwright-webbläsare
+        run: playwright install chromium --with-deps
+
+      - name: Kör enhetstester (pytest)
+        run: pytest tests/ -v
+
+      - name: Kör BDD-tester (behave)
+        run: behave --no-capture
