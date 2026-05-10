@@ -2,12 +2,12 @@
 
 ## 1. Skillnad mellan enhetstest, integrationstest, regressionstest och prestandatest
 
-| Testtyp | Vad testas | Exempel |
-|---|---|---|
-| **Enhetstest** | En enstaka funktion eller klass i isolation | `test_add_book_returns_dict()` |
-| **Integrationstest** | Samspelet mellan två eller fler moduler | `BookStore` + `FavoriteBooks` i kombination |
-| **Regressionstest** | Att tidigare fungerade funktioner fortfarande fungerar efter en ändring | Kör hela testsviten efter en buggfix |
-| **Prestandatest** | Hur snabbt och stabilt systemet beter sig under belastning | Mäta svarstid vid 1 000 samtidiga användare |
+| Testtyp              | Vad testas                                                              | Exempel |
+|----------------------|-------------------------------------------------------------------------|---------|
+| **Enhetstest**       | En enstaka funktion eller klass i isolation                             | `test_add_book_returns_dict()` |
+| **Integrationstest** | Samspelet mellan två eller fler moduler                                | `BookStore` + `FavoriteBooks` i kombination |
+| **Regressionstest**  | Att tidigare fungerade funktioner fortfarande fungerar efter en ändring | Kör hela testsviten efter en buggfix |
+| **Prestandatest**    | Hur snabbt och stabilt systemet beter sig under belastning              | Mäta svarstid vid 1 000 samtidiga användare |
 
 **Enhetstest** är snabba och isolerade – de mockar bort beroenden. De hittar buggar tidigt och exakt.
 
@@ -41,13 +41,13 @@ I detta projekt skrevs `test_book_store.py` och `test_favorite_books.py` **innan
 
 ## 3. Hur BDD skiljer sig från TDD
 
-| Aspekt | TDD | BDD |
-|---|---|---|
-| **Fokus** | Implementation (hur koden fungerar) | Beteende (vad systemet ska göra för användaren) |
-| **Språk** | Python / kod | Gherkin (Given–When–Then på naturligt språk) |
-| **Målgrupp** | Utvecklare | Utvecklare *och* icke-tekniska intressenter |
-| **Verktyg** | pytest, unittest | behave, Cucumber, SpecFlow |
-| **Vad testas** | Enstaka funktioner | Hela användarflöden (E2E) |
+| Aspekt         | TDD                                 | BDD                                             |
+|----------------|-------------------------------------|-------------------------------------------------|
+| **Fokus**      | Implementation (hur koden fungerar) | Beteende (vad systemet ska göra för användaren) |
+| **Språk**      | Python / kod                        | Gherkin (Given–When–Then på naturligt språk) |
+| **Målgrupp**   | Utvecklare                          | Utvecklare *och* icke-tekniska intressenter |
+| **Verktyg**    | pytest, unittest                    | behave, Cucumber, SpecFlow |
+| **Vad testas** | Enstaka funktioner                  | Hela användarflöden (E2E) |
 
 BDD är ett *samarbetsdriven* testmetod. Feature-filer som `katalog.feature` skrivs så att produktägare, testare och utvecklare kan läsa och förstå dem. Stegen binds sedan till Python-kod med dekoratorer.
 

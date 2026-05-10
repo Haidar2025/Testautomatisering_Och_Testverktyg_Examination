@@ -12,11 +12,11 @@ Applikationen som testas: **https://tap-ht25-testverktyg.github.io/exam/**
 
 Affärslogiken implementerades med Test-Driven Development.
 
-| Modul | Tester | Beskrivning |
-|---|---|---|
-| `backend/book_store.py` | 13 | `add_book()`, `toggle_favorite()`, `get_favorites()` |
-| `backend/favorite_books.py` | 8 | `add()`, `remove()`, dublettkontroll |
-| `tests/test_integration.py` | 6 | BookStore + FavoriteBooks i kombination |
+| Modul                       | Tester | Beskrivning                                          |
+|-----------------------------|--------|------------------------------------------------------|
+| `backend/book_store.py`     | 13     | `add_book()`, `toggle_favorite()`, `get_favorites()` |
+| `backend/favorite_books.py` | 8      | `add()`, `remove()`, dublettkontroll |
+| `tests/test_integration.py` | 6      | BookStore + FavoriteBooks i kombination |
 
 Kör enhetstesterna:
 ```bash
@@ -27,13 +27,13 @@ pytest tests/ -v
 
 Hela användarflödet testas med Gherkin-scenarion och Playwright.
 
-| Feature | Scenarion | Vad som testas |
-|---|---|---|
-| Navigation | 4 | Navknappar, aktiv vy inaktiverad |
-| Katalog | 4 | Bokvisning, hjärtmarkering, Scenario Outline |
-| Lägg till bok | 3 | Formulärvalidering, ny bok i katalog |
-| Mina böcker | 3 | Favoritlesta, lägg till/ta bort |
-| Statistik | 4 | Räknare uppdateras dynamiskt |
+| Feature       | Scenarion | Vad som testas                               |
+|---------------|-----------|----------------------------------------------|
+| Navigation    | 4         | Navknappar, aktiv vy inaktiverad             |
+| Katalog       | 4         | Bokvisning, hjärtmarkering, Scenario Outline |
+| Lägg till bok | 3         | Formulärvalidering, ny bok i katalog         |
+| Mina böcker   | 3         | Favoritlesta, lägg till/ta bort              |
+| Statistik     | 4         | Räknare uppdateras dynamiskt                 |
 
 Kör BDD-testerna:
 ```bash
